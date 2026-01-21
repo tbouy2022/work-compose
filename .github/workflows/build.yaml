@@ -43,7 +43,7 @@ jobs:
           context: ./todo-app-frontend
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta-frontend.outputs.tags }}
-          annotations: "${{ steps.meta-frontend.outputs.annotations }}"
+          annotations: ${{ steps.meta-frontend.outputs.annotations }}
           provenance: true
           sbom: true
 
@@ -61,9 +61,8 @@ jobs:
         with: 
           context: ./todo-app-backend
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta-backend.out
-          puts.tags }}
-          annotations: "${{ steps.meta-backend.outputs.annotations }}"
+          tags: ${{ steps.meta-backend.outputs.tags }}
+          annotations: ${{ steps.meta-backend.outputs.annotations }}
           provenance: true
           sbom: true
 
