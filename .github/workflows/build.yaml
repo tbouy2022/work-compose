@@ -11,7 +11,7 @@ on:
   pull_request:
 
 env:
-  DOCKER_USERNAME: tbouy2022
+  DOCKER_USERNAME: kaz4598
 
 jobs:
   build:
